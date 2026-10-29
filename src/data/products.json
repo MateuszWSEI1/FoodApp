@@ -1,0 +1,73 @@
+
+[
+  {
+    "name": "Wołowina mielona",
+    "image": "https://placehold.co/200x120?text=Wolowina",
+    "availability": true,
+    "description": "Świeża wołowina mielona do burgerów.",
+    "price": 39.99
+  },
+  {
+    "name": "Filet z kurczaka",
+    "image": "https://placehold.co/200x120?text=Kurczak",
+    "availability": true,
+    "description": "Filet z kurczaka do dań obiadowych.",
+    "price": 25.99
+  },
+  {
+    "name": "Makaron spaghetti",
+    "image": "https://placehold.co/200x120?text=Makaron",
+    "availability": true,
+    "description": "Makaron pszenny do dań włoskich.",
+    "price": 12.99
+  },
+  {
+    "name": "Mozzarella",
+    "image": "https://placehold.co/200x120?text=Mozzarella",
+    "availability": true,
+    "description": "Ser mozzarella do pizzy i zapiekanek.",
+    "price": 14.99
+  },
+  {
+    "name": "Ryż jaśminowy",
+    "image": "https://placehold.co/200x120?text=Ryz",
+    "availability": true,
+    "description": "Ryż do dań azjatyckich.",
+    "price": 10.99
+  },
+  {
+    "name": "Pomidory",
+    "image": "https://placehold.co/200x120?text=Pomidory",
+    "availability": true,
+    "description": "Świeże pomidory do sałatek i sosów.",
+    "price": 15.99
+  },
+  {
+    "name": "Papryka czerwona",
+    "image": "https://placehold.co/200x120?text=Papryka",
+    "availability": true,
+    "description": "Czerwona papryka do dań mięsnych.",
+    "price": 17.99
+  },
+  {
+    "name": "Boczek",
+    "image": "https://placehold.co/200x120?text=Boczek",
+    "availability": false,
+    "description": "Boczek wędzony do burgerów i makaronów.",
+    "price": 22.99
+  },
+  {
+    "name": "Ser cheddar",
+    "image": "https://placehold.co/200x120?text=Cheddar",
+    "availability": false,
+    "description": "Ser cheddar do burgerów.",
+    "price": 19.99
+  },
+  {
+    "name": "Oliwa z oliwek",
+    "image": "https://placehold.co/200x120?text=Oliwa",
+    "availability": false,
+    "description": "Oliwa do smażenia i sałatek.",
+    "price": 34.99
+  }
+]

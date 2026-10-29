@@ -1,0 +1,11 @@
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+app-restaurant-card {
+  width: 240px;
+}

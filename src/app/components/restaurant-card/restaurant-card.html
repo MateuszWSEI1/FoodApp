@@ -1,0 +1,20 @@
+<section class="card">
+<div class="name">
+  <a [routerLink]="['/restaurants', restaurant().id]">
+    {{ restaurant().name }}
+  </a>
+</div>  <div class="description">{{ restaurant().description }}</div>
+  <div class="cuisine">{{ restaurant().cuisine }}</div>
+  <div class="image"><img src="https://picsum.photos/200/100" alt="Makuś" /></div>
+  <div class="rating">Ocena: {{ restaurant().rating }}/10</div>
+  <div class="delivery-time">Czas dostawy: {{ restaurant().deliveryTimeMin }}-{{ restaurant().deliveryTimeMax }} min</div>
+  <div class="delivery-cost">Koszt dostawy: {{ restaurant().deliveryFee }} zł</div>
+  <div class="is-active">Status: {{ restaurant().isActive ? 'aktywna' : 'nieaktywna' }}</div>
+
+  <input type="text" [formField]="form.name" />
+  <input type="text" [formField]="form.description" />
+  <input type="number" [formField]="form.rating" />
+  <!-- <input type="text" #descriptionInput [value]="description()" (input)="onDescriptionChange(descriptionInput.value)" /> -->
+  <input type="text" #descriptionInput [value]="description()" />
+  <button [disabled]="!canUpdate()" (click)="updateRestaurantData()">Zaktualizuj</button>
+</section>

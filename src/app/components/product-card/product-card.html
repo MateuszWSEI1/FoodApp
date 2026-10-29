@@ -1,0 +1,21 @@
+
+<div>
+  <h4>{{ product().name }}</h4>
+
+  <img [src]="product().image" [alt]="product().name" width="150">
+
+  <p>{{ product().description }}</p>
+  <p>Cena: {{ product().price }} zł</p>
+
+  @if (product().availability) {
+    <p>Dostępny</p>
+  } @else {
+    <strong>Niedostępny</strong>
+  }
+
+  <button
+    [disabled]="!product().availability"
+    (click)="addProduct.emit(product())">
+    Dodaj do koszyka
+  </button>
+</div>

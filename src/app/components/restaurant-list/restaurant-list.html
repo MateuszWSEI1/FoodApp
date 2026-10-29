@@ -1,0 +1,59 @@
+
+<h2>Lista restauracji</h2>
+
+<label for="search">Wyszukaj restaurację:</label>
+<input
+  id="search"
+  type="search"
+  placeholder="Wpisz nazwę..."
+  [value]="searchTerm()"
+  (input)="onSearch($event)"
+/>
+
+<label for="cuisine">Kuchnia:</label>
+<select
+  id="cuisine"
+  [value]="cuisineFilter()"
+  (change)="onCuisineChange($event)"
+>
+  <option value="all">Wszystkie</option>
+  <option value="burger">Burger</option>
+  <option value="pizza">Pizza</option>
+  <option value="sushi">Sushi</option>
+  <option value="asia">Azja</option>
+  <option value="italian">Włochy</option>
+  <option value="polish">Polska debeściak</option>
+  <option value="healthy">Dietetyczna</option>
+</select>
+
+<label>
+  <input
+    type="checkbox"
+    [checked]="activeOnly()"
+    (change)="onStatusChange($event)"
+  />
+  Czynne teraz
+</label>
+
+<label for="sort">Sortuj:</label>
+<select
+  id="sort"
+  [value]="sortBy()"
+  (change)="onSortChange($event)"
+>
+  <option value="none">Domyślnie</option>
+  <option value="rating">Ocena</option>
+  <option value="time">Czas dostawy</option>
+  <option value="fee">Koszt dostawy</option>
+</select>
+
+<button (click)="resetFilters()">Reset filtrów</button>
+<section class="list">
+  @for (restaurant of visibleRestaurants(); track restaurant.id) {
+    <app-restaurant-card [restaurant]="restaurant" />
+  } @empty {
+    <div class="no-restaurants">
+      Nie znaleziono restauracji.
+    </div>
+  }
+</section>

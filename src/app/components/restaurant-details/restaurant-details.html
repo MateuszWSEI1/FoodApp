@@ -1,0 +1,32 @@
+
+<a routerLink="/">Powrót</a>
+
+@if (restaurant; as r) {
+  <h2>{{ r.name }}</h2>
+
+  <p>{{ r.description }}</p>
+  <img [src]="r.imageUrl" [alt]="r.name" width="300">
+
+  <p>Ocena: {{ r.rating }}/10</p>
+  <p>Czas dostawy: {{ r.deliveryTimeMin }}-{{ r.deliveryTimeMax }} min</p>
+  <p>Koszt dostawy: {{ r.deliveryFee }} zł</p>
+  <p>Adres: ul. Testowa {{ r.id }}, Kraków</p>
+
+  <h3>Menu</h3>
+
+  <p>Produkty w koszyku: {{ cartCount }}</p>
+
+  @for (category of categories; track category.name) {
+    <h3>{{ category.name }}</h3>
+
+    @for (product of category.products; track product.name) {
+      <app-product-card
+        [product]="product"
+        (addProduct)="addToCart($event)"
+      />
+    }
+  }
+
+} @else {
+  <p>Nie znaleziono restauracji</p>
+}
