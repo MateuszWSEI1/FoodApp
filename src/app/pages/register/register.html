@@ -1,0 +1,83 @@
+<h1>Rejestracja</h1>
+
+<form (ngSubmit)="submit()">
+  <label for="name">Imię</label>
+  <input
+    id="name"
+    name="name"
+    [(ngModel)]="name"
+    required
+  />
+
+  <label for="email">Adres e-mail</label>
+  <input
+    id="email"
+    type="email"
+    name="email"
+    [(ngModel)]="email"
+    required
+  />
+
+  <label for="password">Hasło</label>
+  <input
+    id="password"
+    type="password"
+    name="password"
+    [(ngModel)]="password"
+    minlength="8"
+    required
+  />
+
+  <h2>Adres dostawy</h2>
+
+  <label for="street">Ulica</label>
+  <input
+    id="street"
+    name="street"
+    [(ngModel)]="street"
+    required
+  />
+
+  <label for="buildingNumber">Numer budynku</label>
+  <input
+    id="buildingNumber"
+    name="buildingNumber"
+    [(ngModel)]="buildingNumber"
+    required
+  />
+
+  <label for="apartmentNumber">Numer mieszkania (opcjonalnie)</label>
+  <input
+    id="apartmentNumber"
+    name="apartmentNumber"
+    [(ngModel)]="apartmentNumber"
+  />
+
+  <label for="postalCode">Kod pocztowy</label>
+  <input
+    id="postalCode"
+    name="postalCode"
+    [(ngModel)]="postalCode"
+    placeholder="00-000"
+    required
+  />
+
+  <label for="city">Miasto</label>
+  <input
+    id="city"
+    name="city"
+    [(ngModel)]="city"
+    required
+  />
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  <button type="submit">Utwórz konto</button>
+</form>
+
+<p>
+  Masz już konto?
+  <a routerLink="/login">Zaloguj się</a>
+</p>
